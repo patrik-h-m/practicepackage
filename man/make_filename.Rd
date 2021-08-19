@@ -18,6 +18,6 @@ This is a helper function that creates "accident_2020.csv.bz2" style
 file names.
 }
 \examples{
-make_filename(2020)
+\dontrun{make_filename(2020)}
 
 }

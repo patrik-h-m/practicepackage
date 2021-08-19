@@ -22,7 +22,9 @@ The function results in an error no file for a specified year is found or
 the file contains invalid data.
 }
 \examples{
-y <- c(2017, 2018, 2019)
-fars_read_years(y)
+\dontrun{
+ y <- c(2017, 2018, 2019)
+ fars_read_years(y)
+}
 
 }

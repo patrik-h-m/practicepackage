@@ -20,6 +20,6 @@ Internally the function uses \code{readr::read_csv} to read the file.
 If \code{filename} does not exist an error is thrown.
 }
 \examples{
-fars_read("data/accident_2015.csv.bz2")
+\dontrun{fars_read("data/accident_2015.csv.bz2")}
 
 }

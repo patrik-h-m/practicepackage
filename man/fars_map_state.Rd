@@ -24,7 +24,9 @@ The function results in an error if \code{fars_read} fails to read data or if
 the data contains no accidents found for the given state.
 }
 \examples{
-fars_map_state(6, 2013)
-fars_map_state(49, 2015)
+\dontrun{
+ fars_map_state(6, 2013)
+ fars_map_state(49, 2015)
+}
 
 }

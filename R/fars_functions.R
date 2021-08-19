@@ -13,7 +13,7 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' fars_read("data/accident_2015.csv.bz2")
+#' \dontrun{fars_read("data/accident_2015.csv.bz2")}
 #'
 #' @export
 fars_read <- function(filename) {
@@ -36,7 +36,7 @@ fars_read <- function(filename) {
 #'      \code{year}
 #'
 #' @examples
-#' make_filename(2020)
+#' \dontrun{make_filename(2020)}
 #'
 #' @export
 make_filename <- function(year) {
@@ -58,8 +58,10 @@ make_filename <- function(year) {
 #' @return a list of tibbles, each containing data for one year
 #'
 #' @examples
-#' y <- c(2017, 2018, 2019)
-#' fars_read_years(y)
+#' \dontrun{
+#'  y <- c(2017, 2018, 2019)
+#'  fars_read_years(y)
+#' }
 #'
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
@@ -94,13 +96,16 @@ fars_read_years <- function(years) {
 #'       in that month and year.
 #'
 #' @examples
-#' y <- c(2017, 2018, 2019)
-#' fars_summarize_years(y)
+#' \dontrun{
+#'  y <- c(2017, 2018, 2019)
+#'  fars_summarize_years(y)
+#' }
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
 #' @importFrom tidyr spread
+#' @importFrom dplyr %>%
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -126,8 +131,10 @@ fars_summarize_years <- function(years) {
 #' @return This function draws a map. It does not return a value.
 #'
 #' @examples
-#' fars_map_state(6, 2013)
-#' fars_map_state(49, 2015)
+#' \dontrun{
+#'  fars_map_state(6, 2013)
+#'  fars_map_state(49, 2015)
+#' }
 #'
 #' @importFrom maps map
 #' @importFrom graphics points

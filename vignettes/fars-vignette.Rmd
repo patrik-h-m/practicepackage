@@ -25,7 +25,7 @@ The package contains functions for reading, summarizing and plotting FARS data.
 Data is expected to be saved in compressed csv files named like accident_YYYY.csv.bz2 where YYYY indicates the year.
 Data from multiple files can be read with a single function call.
 
-```{r read}
+```{r read, eval = FALSE}
 y <- c(2017, 2018, 2019)
 fars_data <- fars_read_years(y)
 ```
@@ -34,7 +34,7 @@ fars_data <- fars_read_years(y)
 
 Show number of accidents per month.
 
-```{r summarize}
+```{r summarize, eval = FALSE}
 y <- c(2017, 2018, 2019)
 fars_summary <- fars_summarize_years(y)
 ```
@@ -45,7 +45,7 @@ A map showing accidents in any US state can be plotted using `fars_map_state` fu
 
 For example to plot accidents of California (FIPS code = 6) for year 2013:
 
-```{r plot}
+```{r plot, eval = FALSE}
 fars_map_state(6, 2013)
 ```
 

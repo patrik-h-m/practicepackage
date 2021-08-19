@@ -23,7 +23,9 @@ The function returns an error if \code{fars_read_years} is unable to read
 data for specified years.
 }
 \examples{
-y <- c(2017, 2018, 2019)
-fars_summarize_years(y)
+\dontrun{
+ y <- c(2017, 2018, 2019)
+ fars_summarize_years(y)
+}
 
 }
