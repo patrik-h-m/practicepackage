@@ -1,0 +1,51 @@
+---
+title: "FARS vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(practicepackage)
+```
+
+The package contains functions for reading, summarizing and plotting FARS data.
+
+## Read data
+
+Data is expected to be saved in compressed csv files named like accident_YYYY.csv.bz2 where YYYY indicates the year.
+Data from multiple files can be read with a single function call.
+
+```{r read}
+y <- c(2017, 2018, 2019)
+fars_data <- fars_read_years(y)
+```
+
+## Summarize data
+
+Show number of accidents per month.
+
+```{r summarize}
+y <- c(2017, 2018, 2019)
+fars_summary <- fars_summarize_years(y)
+```
+
+## Plot accidents on map
+
+A map showing accidents in any US state can be plotted using `fars_map_state` function.
+
+For example to plot accidents of California (FIPS code = 6) for year 2013:
+
+```{r plot}
+fars_map_state(6, 2013)
+```
+
