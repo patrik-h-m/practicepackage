@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # practicepackage
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/patrik-h-m/practicepackage.svg?branch=main)](https://travis-ci.com/patrik-h-m/practicepackage)
 <!-- badges: end -->
 
 This package was created as an exercise for a Coursera course.
